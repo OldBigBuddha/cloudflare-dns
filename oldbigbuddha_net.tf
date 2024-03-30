@@ -1,30 +1,3 @@
-resource "cloudflare_record" "oldbigbuddhanet_cname_cal" {
-  name    = "cal"
-  proxied = false
-  ttl     = 1
-  type    = "CNAME"
-  value   = "ghs.googlehosted.com"
-  zone_id = "483ae9ae0485ed8fd56158fb9309d648"
-}
-
-resource "cloudflare_record" "oldbigbuddhanet_cname_drive" {
-  name    = "drive"
-  proxied = false
-  ttl     = 1
-  type    = "CNAME"
-  value   = "ghs.googlehosted.com"
-  zone_id = "483ae9ae0485ed8fd56158fb9309d648"
-}
-
-resource "cloudflare_record" "oldbigbuddhanet_cname_mail" {
-  name    = "mail"
-  proxied = false
-  ttl     = 1
-  type    = "CNAME"
-  value   = "ghs.googlehosted.com"
-  zone_id = "483ae9ae0485ed8fd56158fb9309d648"
-}
-
 resource "cloudflare_record" "oldbigbuddhanet_cname_root" {
   name    = "oldbigbuddha.net"
   proxied = false
