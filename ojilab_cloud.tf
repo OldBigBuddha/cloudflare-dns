@@ -43,24 +43,6 @@ resource "cloudflare_record" "ojilabcloud_a_reservation" {
   zone_id = "f887b3adea226972affc939e06efab29"
 }
 
-resource "cloudflare_record" "ojilabcloud_cname_root_mydnsjp1" {
-  name    = "*"
-  proxied = false
-  ttl     = 120
-  type    = "CNAME"
-  value   = "ojilab.mydns.jp"
-  zone_id = "f887b3adea226972affc939e06efab29"
-}
-
-resource "cloudflare_record" "ojilabcloud_cname_root_mydnsjp2" {
-  name    = "ojilab.cloud"
-  proxied = false
-  ttl     = 120
-  type    = "CNAME"
-  value   = "ojilab.mydns.jp"
-  zone_id = "f887b3adea226972affc939e06efab29"
-}
-
 resource "cloudflare_record" "ojilabcloud_txt_access_demo" {
   name    = "_github-pages-challenge-oldbigbuddha.access-demo"
   proxied = false
