@@ -84,14 +84,6 @@ resource "cloudflare_record" "oldbigbuddhadev_mx_root5" {
   zone_id  = "85b3d2cf975460a72eb76acf63413fd8"
 }
 
-resource "cloudflare_record" "oldbigbuddhadev_spf_root" {
-  name    = "oldbigbuddha.dev"
-  proxied = false
-  ttl     = 1
-  type    = "SPF"
-  zone_id = "85b3d2cf975460a72eb76acf63413fd8"
-}
-
 resource "cloudflare_record" "oldbigbuddhadev_txt_atproto" {
   comment = "AT Protocol"
   name    = "_atproto"
