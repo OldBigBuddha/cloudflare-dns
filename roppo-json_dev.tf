@@ -1,33 +1,3 @@
-import {
-  to = cloudflare_record.roppojsondev_a_root1
-  id = "66117ce3d2f787b55de4e5aa859ffceb/1afef8ec193641cbb4c48180888b2c69"
-}
-
-import {
-  to = cloudflare_record.roppojsondev_a_root2
-  id = "66117ce3d2f787b55de4e5aa859ffceb/e2ae33112698aebc591a12a52a9b3759"
-}
-
-import {
-  to = cloudflare_record.roppojsondev_a_root3
-  id = "66117ce3d2f787b55de4e5aa859ffceb/9967cf487501a2228f6820ef223a7c96"
-}
-
-import {
-  to = cloudflare_record.roppojsondev_a_root4
-  id = "66117ce3d2f787b55de4e5aa859ffceb/e5b705c2c09d6878a422af80ce990b00"
-}
-
-import {
-  to = cloudflare_record.roppojsondev_cname_api
-  id = "66117ce3d2f787b55de4e5aa859ffceb/762933d5414c910923416948c1472d65"
-}
-
-import {
-  to = cloudflare_record.roppojsondev_txt_root_github_challenge
-  id = "66117ce3d2f787b55de4e5aa859ffceb/db0d8e71cfa6c02633ffe88270ac1689"
-}
-
 resource "cloudflare_record" "roppojsondev_a_root1" {
   name    = "roppo-json.dev"
   proxied = true
