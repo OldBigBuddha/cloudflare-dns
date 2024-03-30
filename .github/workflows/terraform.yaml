@@ -1,6 +1,5 @@
 # Copy from https://blog.g-gen.co.jp/entry/using-terraform-via-github-actions
 name: terraform
-  
 # main ブランチへのPull Request と Merge をトリガーに指定
 on:
   push:
@@ -30,7 +29,7 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v1'
         with:
-          workload_identity_provider: 'projects/771064413133/locations/global/workloadIdentityPools/mypool/providers/myprovider'
+          workload_identity_provider: 'projects/771064413133/locations/global/workloadIdentityPools/cloudflare-dns/providers/github-action'
           service_account: 'cloudflare-dns@terraform-418809.iam.gserviceaccount.com'
   
       # https://github.com/hashicorp/setup-terraform
