@@ -1,11 +1,11 @@
-resource "cloudflare_record" "ojilabcloud_a_access_demo1" {
-  name    = "access-demo"
-  proxied = true
-  ttl     = 1
-  type    = "A"
-  value   = "185.199.111.153"
-  zone_id = "f887b3adea226972affc939e06efab29"
-}
+# resource "cloudflare_record" "ojilabcloud_a_access_demo1" {
+#   name    = "access-demo"
+#   proxied = true
+#   ttl     = 1
+#   type    = "A"
+#   value   = "185.199.111.153"
+#   zone_id = "f887b3adea226972affc939e06efab29"
+# }
 
 resource "cloudflare_record" "ojilabcloud_a_access_demo2" {
   name    = "access-demo"
