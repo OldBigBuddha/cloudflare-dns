@@ -3,3 +3,13 @@ variable "cloudflare_api_token" {
   description = "Cloudflare API Token"
   sensitive   = true
 }
+
+variable "records" {
+  type = map(list(object({
+    name    = string
+    proxied = string
+    ttl     = number
+    type    = string
+    value   = string
+  })))
+}
