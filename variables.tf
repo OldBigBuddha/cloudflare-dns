@@ -6,10 +6,11 @@ variable "cloudflare_api_token" {
 
 variable "records" {
   type = map(list(object({
-    name    = string
-    proxied = string
-    ttl     = number
-    type    = string
-    value   = string
+    name     = string
+    proxied  = string
+    ttl      = number
+    type     = string
+    value    = string
+    priority = optional(number)
   })))
 }
