@@ -24,6 +24,7 @@ resource "cloudflare_record" "record" {
   type    = each.value.type
   value   = each.value.value
 
-  proxied = each.value.proxied
-  ttl     = each.value.ttl
+  proxied  = each.value.proxied
+  ttl      = each.value.ttl
+  priority = each.value.priority
 }
