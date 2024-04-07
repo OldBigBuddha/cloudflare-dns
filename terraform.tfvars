@@ -15,7 +15,6 @@ records = {
       ttl      = 1
       type     = "MX"
       value    = "alt4.aspmx.l.google.com"
-      zone_id  = "483ae9ae0485ed8fd56158fb9309d648"
     },
     {
       name     = "oldbigbuddha.net"
@@ -24,7 +23,6 @@ records = {
       ttl      = 1
       type     = "MX"
       value    = "alt3.aspmx.l.google.com"
-      zone_id  = "483ae9ae0485ed8fd56158fb9309d648"
     },
     {
       name     = "oldbigbuddha.net"
@@ -33,7 +31,6 @@ records = {
       ttl      = 1
       type     = "MX"
       value    = "alt2.aspmx.l.google.com"
-      zone_id  = "483ae9ae0485ed8fd56158fb9309d648"
     },
     {
       name     = "oldbigbuddha.net"
@@ -42,7 +39,6 @@ records = {
       ttl      = 1
       type     = "MX"
       value    = "alt1.aspmx.l.google.com"
-      zone_id  = "483ae9ae0485ed8fd56158fb9309d648"
     },
     {
       name     = "oldbigbuddha.net"
@@ -51,7 +47,6 @@ records = {
       ttl      = 1
       type     = "MX"
       value    = "aspmx.l.google.com"
-      zone_id  = "483ae9ae0485ed8fd56158fb9309d648"
     },
     {
       name    = "_dmarc"
