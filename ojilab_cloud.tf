@@ -61,3 +61,11 @@ resource "cloudflare_record" "ojilabcloud_txt_root_googlesiteverification" {
   zone_id = "f887b3adea226972affc939e06efab29"
 }
 
+resource "cloudflare_record" "ojilabcloud_a_cname_sample_discord_interaction" {
+  name    = "sample.discord-interaction"
+  proxied = true
+  ttl     = 1
+  type    = "CNAME"
+  value   = "eb1dc0c7-65df-44b9-8c23-f7ab5df8acf8.cfargotunnel.com"
+  zone_id = "f887b3adea226972affc939e06efab29"
+}
