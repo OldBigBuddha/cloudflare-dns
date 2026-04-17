@@ -93,3 +93,12 @@ resource "cloudflare_record" "oldbigbuddhanet_txt_root_keybase" {
   zone_id = "483ae9ae0485ed8fd56158fb9309d648"
 }
 
+resource "cloudflare_record" "oldbigbuddhanet_txt_google_postmaster" {
+  name    = "oldbigbuddha.net"
+  proxied = false
+  ttl     = 1
+  type    = "TXT"
+  value   = "google-site-verification=dp2_PZLSVwFu6CSrUweDaxvm_90QXgSs8QsHneVsFK0"
+  zone_id = "483ae9ae0485ed8fd56158fb9309d648"
+}
+
