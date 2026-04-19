@@ -62,7 +62,7 @@ resource "cloudflare_record" "ojilabcloud_txt_root_googlesiteverification" {
 }
 
 resource "cloudflare_record" "ojilabcloud_a_cname_sample_discord_interaction" {
-  name    = "sample.discord-interaction"
+  name    = "sample-discord-interaction.ojilab.cloud"
   proxied = true
   ttl     = 1
   type    = "CNAME"
