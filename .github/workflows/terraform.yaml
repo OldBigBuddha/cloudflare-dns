@@ -26,16 +26,16 @@ jobs:
     # Workload Identity 連携
     steps:
       # https://cloud.google.com/iam/docs/using-workload-identity-federation#generate-automatic
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - id: 'auth'
         name: 'Authenticate to Google Cloud'
-        uses: 'google-github-actions/auth@v1'
+        uses: 'google-github-actions/auth@v3'
         with:
           workload_identity_provider: 'projects/771064413133/locations/global/workloadIdentityPools/cloudflare-dns/providers/github-action'
           service_account: 'cloudflare-dns@terraform-418809.iam.gserviceaccount.com'
   
       # https://github.com/hashicorp/setup-terraform
-      - uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v4
   
       - name: Terraform fmt
         id: fmt
@@ -45,6 +45,21 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
+
+      # One-shot retirement after ojilab.cloud moved to OJILab-dev/dns.
+      # Removing state entries does not delete the records from Cloudflare.
+      - name: Retire moved ojilab.cloud resources from state
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        shell: bash
+        run: |
+          mapfile -t resources < <(
+            terraform state list |
+              grep '^cloudflare_record\.ojilabcloud_' || true
+          )
+
+          if (( ${#resources[@]} > 0 )); then
+            terraform state rm "${resources[@]}"
+          fi
   
       - name: Terraform Validate
         id: validate
@@ -56,7 +71,7 @@ jobs:
         continue-on-error: true
   
       - name: Comment Terraform Plan
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         if: github.event_name == 'pull_request'
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
