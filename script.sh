@@ -7,7 +7,6 @@ CLOUDFLARE_EMAIL="services+cloudflare@oldbigbuddha.net"
 declare -A domains=(
     ["oldbigbuddha_dev"]="85b3d2cf975460a72eb76acf63413fd8"
     ["oldbigbuddha_net"]="483ae9ae0485ed8fd56158fb9309d648"
-    ["ojilab_cloud"]="f887b3adea226972affc939e06efab29"
     ["roppo-json_dev"]="66117ce3d2f787b55de4e5aa859ffceb"
 )
 
