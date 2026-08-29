@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-CLOUDFLARE_EMAIL="services+cloudflare@oldbigbuddha.net"
+: "${CLOUDFLARE_EMAIL:?Set CLOUDFLARE_EMAIL}"
 : "${CLOUDFLARE_API_KEY:?Set CLOUDFLARE_API_KEY}"
 
 declare -A domains=(
