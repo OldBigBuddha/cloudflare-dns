@@ -48,21 +48,6 @@ jobs:
         id: init
         run: terraform init
 
-      # One-shot retirement after ojilab.cloud moved to OJILab-dev/dns.
-      # Removing state entries does not delete the records from Cloudflare.
-      - name: Retire moved ojilab.cloud resources from state
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        shell: bash
-        run: |
-          mapfile -t resources < <(
-            terraform state list |
-              grep '^cloudflare_record\.ojilabcloud_' || true
-          )
-
-          if (( ${#resources[@]} > 0 )); then
-            terraform state rm "${resources[@]}"
-          fi
-  
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
