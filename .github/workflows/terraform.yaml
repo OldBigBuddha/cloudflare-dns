@@ -36,6 +36,8 @@ jobs:
   
       # https://github.com/hashicorp/setup-terraform
       - uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: 1.11.4
   
       - name: Terraform fmt
         id: fmt
